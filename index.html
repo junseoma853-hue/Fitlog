@@ -1,38 +1,48 @@
 <!DOCTYPE html>
 <html lang="ko">
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Fitlog | 나만의 운동 루틴 트래커</title>
-  <link rel="stylesheet" href="style.css">
-</head>
-<body>
-  <header>
-    <h1>🏋️‍♀️ Fitlog</h1>
-    <p>나만의 운동 루틴 기록 웹앱</p>
-  </header>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Fitlog - 나의 운동 기록</title>
+    <link rel="stylesheet" href="./style.css" />
+  </head>
+  <body>
+    <header>
+      <h1>🏋️ Fitlog</h1>
+      <p>나의 운동 기록을 관리하고, 성장의 변화를 확인하세요!</p>
+    </header>
 
-  <main>
-    <section id="add-routine">
-      <input type="text" id="routine-input" placeholder="오늘의 운동을 입력하세요">
-      <button id="add-btn">추가</button>
-    </section>
+    <main>
+      <section class="input-section">
+        <h2>운동 기록 추가</h2>
+        <form id="log-form">
+          <input type="text" id="exercise" placeholder="운동 종목 (예: 스쿼트)" required />
+          <input type="number" id="duration" placeholder="시간(분)" required />
+          <input type="number" id="calories" placeholder="칼로리(kcal)" required />
+          <button type="submit">기록 추가</button>
+        </form>
+      </section>
 
-    <section id="routine-list"></section>
+      <section class="log-section">
+        <h2>운동 기록</h2>
+        <table id="log-table">
+          <thead>
+            <tr>
+              <th>날짜</th>
+              <th>운동</th>
+              <th>시간(분)</th>
+              <th>칼로리(kcal)</th>
+            </tr>
+          </thead>
+          <tbody id="log-body"></tbody>
+        </table>
+      </section>
+    </main>
 
-    <section id="timer">
-      <h2>⏱ 운동 시간</h2>
-      <p id="time">00:00</p>
-      <button id="start">시작</button>
-      <button id="stop">중지</button>
-      <button id="reset">초기화</button>
-    </section>
-  </main>
+    <footer>
+      <p>© 2025 Fitlog | 나의 체력 성장 기록 앱</p>
+    </footer>
 
-  <footer>
-    <p>© 2025 Fitlog | 체육 세특 프로젝트</p>
-  </footer>
-
-  <script src="script.js"></script>
-</body>
+    <script src="./script.js"></script>
+  </body>
 </html>
